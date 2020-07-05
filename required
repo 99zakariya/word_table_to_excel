@@ -2,3 +2,6 @@ python 3+
 pandas (pip install pandas)
 docx   (pip install pyhton-docx)
 xlsxwriter (pip install XlsxWriter)
+ 
+
+ensure the file is on the same directry as python software 
