@@ -1,3 +1,4 @@
 python 3+
 pandas (pip install pandas)
 docx   (pip install pyhton-docx)
+xlsxwriter (pip install XlsxWriter)
