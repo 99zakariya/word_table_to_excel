@@ -19,6 +19,7 @@ def iter_unique_cells(row):
         yield cell
 heads=["Type","Title","content","choice_1","choice_2","choice_3","choice_4","choice_5","correct_choice","Skill Name"]
 data=[]
+print("ensure the word file is in the same directry as python software!!")
 path=(os.path.dirname(os.path.realpath(__file__)))
 print(path)
 filename=input("enter the name of the file it should be in same directory without extention")
