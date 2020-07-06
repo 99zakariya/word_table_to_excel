@@ -29,8 +29,8 @@ try:
         sm=[]
         for row in table.rows:
             for cell in iter_unique_cells(row):
-                for paragraph in cell.paragraphs:
-                    sm.append(paragraph.text)
+               # for paragraph in :
+                sm.append(cell.text)
         data.append(sm)
 
     fullText = []
@@ -106,4 +106,4 @@ try:
     print("done ",len(data),' question found  - saved you ',2*len(data),' min')
     time.sleep(2)
 except Exception as ex:
-    print('somthing went wrong'+ex)
+    print('somthing went wrong',ex)
