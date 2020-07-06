@@ -21,6 +21,15 @@ heads=["Type","Title","content","choice_1","choice_2","choice_3","choice_4","cho
 data=[]
 print("ensure the word file is in the same directry as python software!!")
 path=(os.path.dirname(os.path.realpath(__file__)))
+ind=[11,15,19,23,27]
+print("press","1 if  word file is of new format","2 if word file is of old format",sep='\n' )
+choi=int(input())
+if choi== 1:
+    ind=ind[1:]
+elif choi==2:
+    ind=ind[:-1]
+else:
+    exit(0)
 print(path)
 filename=input("enter the name of the file it should be in same directory without extention")
 try:
@@ -68,7 +77,7 @@ try:
         else:
             new_data.append('')
         new_data.append(k[0])
-        ind=[15,19,23,27]
+        
         ans="0"
         for p in range(4):
             new_data.append(k[ind[p]])
@@ -96,9 +105,9 @@ try:
 
     writer = pd.ExcelWriter(path+'\\'+filename+'.xlsx', engine='xlsxwriter')
 
-    mc_df.to_excel(writer, sheet_name='Multiple choice question')
+    mc_df.to_excel(writer, sheet_name='Multiple choice question',index=False)
 
-    ma_df.to_excel(writer, sheet_name='Multiple choice answer')
+    ma_df.to_excel(writer, sheet_name='Multiple choice answer',index=False)
 
 
 
@@ -107,3 +116,4 @@ try:
     time.sleep(2)
 except Exception as ex:
     print('somthing went wrong',ex)
+
