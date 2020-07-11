@@ -188,7 +188,7 @@ def mainlogic():
                                     an=s+2
                                     while True:
                                         
-                                        int(k[an])
+                                        float(k[an])
                                         an=an+4
                                         lent_t=lent_t+1
                                 except:
